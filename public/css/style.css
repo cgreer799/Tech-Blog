@@ -1,0 +1,36 @@
+.nav{
+    width: 100%;
+    position: fixed;
+    background-color: aquamarine;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    margin: 0 40px;
+}
+ 
+.inline {
+    display: inline;
+}
+
+.center {
+    justify-content: center;
+}
+
+.space-btw {
+    justify-content: space-between;
+}
+
+.col-flex-grow {
+    flex-grow: 1;
+}

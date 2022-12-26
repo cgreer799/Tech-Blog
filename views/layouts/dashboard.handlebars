@@ -7,27 +7,27 @@
   <title>Tech Blog</title>
 </head>
 
-<body>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/dashboard">Dashboard</a></li>
-      <li><a href="#" id="logout-link">Logout</a></li>
+<body class="flex-col">
+  <nav class="nav">
+    <ul class="flex-row">
+      <li class="inline nav-item"><a href="/">Home</a></li>
+      <li class="inline nav-item"><a href="/dashboard">Dashboard</a></li>
+      <li class="inline nav-item"><a href="#" id="logout-link">Logout</a></li>
     </ul>
   </nav>
-  <header>
+  <header class="center">
     <h1><a href="/dashboard">Your Dashboard</a></h1>
   </header>
 
-  <main class="col-auto">
+  <main class=".col-flex-grow">
     {{{body}}}
   </main>
 
-  <footer>
+  <footer class="center">
     <a href="/dashboard/new">New Post</a>
   </footer>
 </body>
 
-
+<script src="/js/logout.js"></script>
 
 </html>
