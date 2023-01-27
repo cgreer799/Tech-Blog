@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, Comment, User } = require('../models/index.js');
+const { Post, Comment, User } = require('../../models/index.js');
 
 router.get('/', async (req, res) => {
     try {
@@ -17,7 +17,6 @@ router.get('/', async (req, res) => {
 
 router.get('/post/:id', async (req, res) => {
     try {
-        //find by primary key
         const postData = await Post.findByPk(req.params.id, {
         include: [
             User,
