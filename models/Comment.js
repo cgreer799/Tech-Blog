@@ -1,5 +1,6 @@
 const {Model} = require('sequelize');
 const sequelize = require('../config/config.js');
+const User = require('./User.js');
 module.exports = (sequelize, DataTypes) => {
   class Comment extends Model {}
 
@@ -14,4 +15,10 @@ module.exports = (sequelize, DataTypes) => {
       sequelize
     }
   );
+
+  Comment.belongsTo(User, {
+    foreignKey:'userId',
+    onDelete:'CASCADE'
+  });
+
 };

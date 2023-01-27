@@ -50,4 +50,5 @@ module.exports = (sequelize, DataTypes) => {
             modelName:'User'
         }
     );
+
 };
