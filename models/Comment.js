@@ -1,18 +1,17 @@
-const { Sequelize, Model, DataTypes } = require('sequelize');
+const {Model} = require('sequelize');
 const sequelize = require('../config/config.js');
+module.exports = (sequelize, DataTypes) => {
+  class Comment extends Model {}
 
-class Comment extends Model {}
-
-Comment.init(
-  {
-    body: {
-      type: DataTypes.STRING,
-      allowNull: false
+  Comment.init(
+    {
+      body: {
+        type: DataTypes.STRING,
+        allowNull: false
+      }
+    },
+    {
+      sequelize
     }
-  },
-  {
-    sequelize
-  }
-);
-
-module.exports = Comment;
+  );
+};
